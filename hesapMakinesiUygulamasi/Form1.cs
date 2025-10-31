@@ -5,7 +5,7 @@ namespace hesapMakinesiUygulamasi
     public partial class Form1 : Form
     {
         int sonuc, sayi1, sayi2;
-        decimal ondalik;
+        decimal ondalik, sonuc3;
         byte islem;
         double sonuc2;
 
@@ -19,7 +19,7 @@ namespace hesapMakinesiUygulamasi
             sayi1 = Convert.ToInt32(sayi.Text);
             label5.Text = sayi1.ToString();
             sayi.Text = "";
-            return sayi1; 
+            return sayi1;
         }
 
         public int Sayi2al()
@@ -134,7 +134,7 @@ namespace hesapMakinesiUygulamasi
                     break;
                 case 3:
                     Sayi2al();
-                    sonuc= sayi1 * sayi2; 
+                    sonuc = sayi1 * sayi2;
                     break;
                 case 4:
                     Sayi2al();
@@ -153,11 +153,15 @@ namespace hesapMakinesiUygulamasi
                     break;
                 case 8:
                     Sayi2al();
-                    sonuc = (int) Math.Pow(sayi1, sayi2);
+                    sonuc = (int)Math.Pow(sayi1, sayi2);
                     break;
                 case 9:
                     sonuc2 = Math.Sqrt(sayi1);
                     MessageBox.Show(sayi1 + " sayýsýnýn karekökü : " + sonuc2.ToString());
+                    break;
+                case 10:
+                    sonuc3 = Math.Round(ondalik);
+                    MessageBox.Show(ondalik + " sayýsý yuvarlandýðýnda : " + sonuc3.ToString());
                     break;
             }
             label7.Text = sonuc.ToString();
@@ -166,6 +170,13 @@ namespace hesapMakinesiUygulamasi
         private void sayi_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void yuvarla_Click(object sender, EventArgs e)
+        {
+            ondalik = Convert.ToDecimal(sayi.Text);
+            label5.Text=ondalik.ToString();
+            islem = 10;
         }
     }
 }

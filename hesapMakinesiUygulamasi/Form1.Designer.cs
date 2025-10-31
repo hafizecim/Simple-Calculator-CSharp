@@ -173,6 +173,7 @@
             yuvarla.TabIndex = 7;
             yuvarla.Text = "Yuvarla";
             yuvarla.UseVisualStyleBackColor = false;
+            yuvarla.Click += yuvarla_Click;
             // 
             // karekok
             // 
