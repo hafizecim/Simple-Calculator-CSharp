@@ -42,7 +42,8 @@ namespace hesapMakinesiUygulamasi
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 3;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -57,7 +58,8 @@ namespace hesapMakinesiUygulamasi
 
         private void cikartma_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 2;
         }
 
         private void toplama_Click(object sender, EventArgs e)
@@ -118,6 +120,14 @@ namespace hesapMakinesiUygulamasi
                 case 1:
                     Sayi2al();
                     sonuc = sayi1 + sayi2;
+                    break;
+                case 2:
+                    Sayi2al();
+                    sonuc = sayi1 - sayi2;
+                    break;
+                case 3:
+                    Sayi2al();
+                    sonuc= sayi1 * sayi2; 
                     break;
             }
             label7.Text = sonuc.ToString();
