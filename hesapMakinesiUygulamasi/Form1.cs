@@ -2,10 +2,31 @@ namespace hesapMakinesiUygulamasi
 {
     public partial class Form1 : Form
     {
+        int sonuc, sayi1, sayi2;
+        decimal ondalik;
+        byte islem;
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        public int Sayi1al()
+        {
+            sayi1 = Convert.ToInt32(sayi.Text);
+            label5.Text = sayi1.ToString();
+            sayi.Text = "";
+            return sayi1; 
+        }
+
+        public int Sayi2al()
+        {
+            sayi2 = Convert.ToInt32(sayi.Text);
+            label6.Text = sayi2.ToString();
+            sayi.Text = "";
+            return sayi2;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
