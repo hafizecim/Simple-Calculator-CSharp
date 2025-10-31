@@ -77,7 +77,9 @@ namespace hesapMakinesiUygulamasi
 
         private void yukariYuvarla_Click(object sender, EventArgs e)
         {
-
+            ondalik = Convert.ToDecimal(sayi.Text);
+            label5.Text = ondalik.ToString();
+            islem = 11;
         }
 
         private void asagiYuvarla_Click(object sender, EventArgs e)
@@ -162,6 +164,10 @@ namespace hesapMakinesiUygulamasi
                 case 10:
                     sonuc3 = Math.Round(ondalik);
                     MessageBox.Show(ondalik + " sayýsý yuvarlandýðýnda : " + sonuc3.ToString());
+                    break;
+                case 11:
+                    sonuc3 = Math.Ceiling(ondalik);
+                    MessageBox.Show(ondalik + " sayýsý yukarý yuvarlandýðýnda : " + sonuc3.ToString());
                     break;
             }
             label7.Text = sonuc.ToString();
