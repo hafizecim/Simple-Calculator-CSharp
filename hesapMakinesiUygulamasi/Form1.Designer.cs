@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             sayi = new TextBox();
-            esittir = new Button();
             toplama = new Button();
             cikartma = new Button();
             carpma = new Button();
@@ -49,6 +48,7 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            esittir = new Button();
             SuspendLayout();
             // 
             // label1
@@ -69,18 +69,7 @@
             sayi.Name = "sayi";
             sayi.Size = new Size(152, 36);
             sayi.TabIndex = 1;
-            // 
-            // esittir
-            // 
-            esittir.BackColor = Color.Aquamarine;
-            esittir.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            esittir.Location = new Point(25, 62);
-            esittir.Name = "esittir";
-            esittir.Size = new Size(298, 45);
-            esittir.TabIndex = 2;
-            esittir.Text = "=";
-            esittir.UseVisualStyleBackColor = false;
-            esittir.Click += button1_Click;
+            sayi.TextChanged += sayi_TextChanged;
             // 
             // toplama
             // 
@@ -93,6 +82,7 @@
             toplama.TabIndex = 3;
             toplama.Text = "+";
             toplama.UseVisualStyleBackColor = false;
+            toplama.Click += toplama_Click;
             // 
             // cikartma
             // 
@@ -105,6 +95,7 @@
             cikartma.TabIndex = 4;
             cikartma.Text = "-";
             cikartma.UseVisualStyleBackColor = false;
+            cikartma.Click += cikartma_Click;
             // 
             // carpma
             // 
@@ -130,6 +121,7 @@
             bolme.TabIndex = 6;
             bolme.Text = "/";
             bolme.UseVisualStyleBackColor = false;
+            bolme.Click += bolme_Click;
             // 
             // mutlak
             // 
@@ -142,6 +134,7 @@
             mutlak.TabIndex = 10;
             mutlak.Text = "Mutlak Değer";
             mutlak.UseVisualStyleBackColor = false;
+            mutlak.Click += mutlak_Click;
             // 
             // asagiYuvarla
             // 
@@ -154,6 +147,7 @@
             asagiYuvarla.TabIndex = 9;
             asagiYuvarla.Text = "Aşağı Yuvarla";
             asagiYuvarla.UseVisualStyleBackColor = false;
+            asagiYuvarla.Click += asagiYuvarla_Click;
             // 
             // yukariYuvarla
             // 
@@ -166,6 +160,7 @@
             yukariYuvarla.TabIndex = 8;
             yukariYuvarla.Text = "Yukarı Yuvarla";
             yukariYuvarla.UseVisualStyleBackColor = false;
+            yukariYuvarla.Click += yukariYuvarla_Click;
             // 
             // yuvarla
             // 
@@ -190,6 +185,7 @@
             karekok.TabIndex = 14;
             karekok.Text = "Karekök Alma";
             karekok.UseVisualStyleBackColor = false;
+            karekok.Click += karekok_Click;
             // 
             // us
             // 
@@ -202,6 +198,7 @@
             us.TabIndex = 13;
             us.Text = "Üs Alma";
             us.UseVisualStyleBackColor = false;
+            us.Click += us_Click;
             // 
             // buyukBul
             // 
@@ -214,6 +211,7 @@
             buyukBul.TabIndex = 12;
             buyukBul.Text = "Büyük Sayı Bul";
             buyukBul.UseVisualStyleBackColor = false;
+            buyukBul.Click += buyukBul_Click;
             // 
             // kucukBul
             // 
@@ -226,6 +224,7 @@
             kucukBul.TabIndex = 11;
             kucukBul.Text = "Küçük Sayı Bul";
             kucukBul.UseVisualStyleBackColor = false;
+            kucukBul.Click += kucukBul_Click;
             // 
             // label2
             // 
@@ -270,6 +269,7 @@
             label5.Size = new Size(95, 23);
             label5.TabIndex = 18;
             label5.Text = "Birinci sayı";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -295,11 +295,24 @@
             label7.TabIndex = 20;
             label7.Text = "Sonuç";
             // 
+            // esittir
+            // 
+            esittir.BackColor = Color.Aquamarine;
+            esittir.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            esittir.Location = new Point(25, 62);
+            esittir.Name = "esittir";
+            esittir.Size = new Size(298, 45);
+            esittir.TabIndex = 21;
+            esittir.Text = "=";
+            esittir.UseVisualStyleBackColor = false;
+            esittir.Click += esittir_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(350, 463);
+            Controls.Add(esittir);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -318,7 +331,6 @@
             Controls.Add(carpma);
             Controls.Add(cikartma);
             Controls.Add(toplama);
-            Controls.Add(esittir);
             Controls.Add(sayi);
             Controls.Add(label1);
             Name = "Form1";
@@ -332,7 +344,6 @@
 
         private Label label1;
         private TextBox sayi;
-        private Button esittir;
         private Button toplama;
         private Button cikartma;
         private Button carpma;
@@ -351,5 +362,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private Button esittir;
     }
 }

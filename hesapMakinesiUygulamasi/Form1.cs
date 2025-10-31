@@ -31,5 +31,70 @@ namespace hesapMakinesiUygulamasi
         {
 
         }
+
+        private void cikartma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toplama_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kucukBul_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yukariYuvarla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asagiYuvarla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mutlak_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buyukBul_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void us_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void karekok_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bolme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void esittir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sayi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
