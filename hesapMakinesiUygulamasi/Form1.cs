@@ -104,7 +104,8 @@ namespace hesapMakinesiUygulamasi
 
         private void karekok_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 9;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -152,6 +153,9 @@ namespace hesapMakinesiUygulamasi
                 case 8:
                     Sayi2al();
                     sonuc = (int) Math.Pow(sayi1, sayi2);
+                    break;
+                case 9:
+                    sonuc = (int) Math.Sqrt(sayi1);
                     break;
             }
             label7.Text = sonuc.ToString();
