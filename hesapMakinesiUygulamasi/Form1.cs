@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace hesapMakinesiUygulamasi
 {
     public partial class Form1 : Form
@@ -60,7 +62,8 @@ namespace hesapMakinesiUygulamasi
 
         private void toplama_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 1;
         }
 
         private void kucukBul_Click(object sender, EventArgs e)
@@ -110,7 +113,14 @@ namespace hesapMakinesiUygulamasi
 
         private void esittir_Click(object sender, EventArgs e)
         {
-
+            switch (islem)
+            {
+                case 1:
+                    Sayi2al();
+                    sonuc = sayi1 + sayi2;
+                    break;
+            }
+            label7.Text = sonuc.ToString();
         }
 
         private void sayi_TextChanged(object sender, EventArgs e)

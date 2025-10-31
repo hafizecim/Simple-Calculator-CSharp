@@ -286,7 +286,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.DarkTurquoise;
+            label7.BackColor = Color.Violet;
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label7.Location = new Point(177, 420);
