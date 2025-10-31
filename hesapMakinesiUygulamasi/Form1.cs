@@ -70,7 +70,8 @@ namespace hesapMakinesiUygulamasi
 
         private void kucukBul_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 6;
         }
 
         private void yukariYuvarla_Click(object sender, EventArgs e)
@@ -137,6 +138,10 @@ namespace hesapMakinesiUygulamasi
                     break;
                 case 5:
                     sonuc = Math.Abs(sayi1);
+                    break;
+                case 6:
+                    Sayi2al();
+                    sonuc = Math.Min(sayi1, sayi2);
                     break;
             }
             label7.Text = sonuc.ToString();
