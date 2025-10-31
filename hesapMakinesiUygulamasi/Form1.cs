@@ -92,7 +92,8 @@ namespace hesapMakinesiUygulamasi
 
         private void buyukBul_Click(object sender, EventArgs e)
         {
-
+            Sayi1al();
+            islem = 7;
         }
 
         private void us_Click(object sender, EventArgs e)
@@ -142,6 +143,10 @@ namespace hesapMakinesiUygulamasi
                 case 6:
                     Sayi2al();
                     sonuc = Math.Min(sayi1, sayi2);
+                    break;
+                case 7:
+                    Sayi2al();
+                    sonuc = Math.Max(sayi1, sayi2);
                     break;
             }
             label7.Text = sonuc.ToString();
