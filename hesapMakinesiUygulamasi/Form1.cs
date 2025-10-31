@@ -7,6 +7,7 @@ namespace hesapMakinesiUygulamasi
         int sonuc, sayi1, sayi2;
         decimal ondalik;
         byte islem;
+        double sonuc2;
 
         public Form1()
         {
@@ -155,7 +156,8 @@ namespace hesapMakinesiUygulamasi
                     sonuc = (int) Math.Pow(sayi1, sayi2);
                     break;
                 case 9:
-                    sonuc = (int) Math.Sqrt(sayi1);
+                    sonuc2 = Math.Sqrt(sayi1);
+                    MessageBox.Show(sayi1 + " sayýsýnýn karekökü : " + sonuc2.ToString());
                     break;
             }
             label7.Text = sonuc.ToString();
